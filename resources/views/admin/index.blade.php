@@ -21,6 +21,4 @@
             }
           </script>
     </div>
-
-    {{-- Martin stinkt naar bavianen stront --}}
 </x-layout>
