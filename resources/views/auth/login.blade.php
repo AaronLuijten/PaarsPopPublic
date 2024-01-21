@@ -8,7 +8,7 @@
                 </div>
                 <!-- email -->
                 <label for="email" class="text-green-300"><b>Email: </b></label>
-                <input type="text" name="email" id="email" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <input type="text" name="email" id="email" class="input">
                 <br>
 
                 <!-- password  -->
