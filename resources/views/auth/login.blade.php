@@ -4,32 +4,38 @@
             <form action="" method="POST" class="">
                 @csrf
                 <div class="">
-                    <b class="bold-header-login">INLOGGEN</b>
+                    <h2>INLOGGEN</h2>
                 </div>
                 <!-- email -->
                 <div class="input-box-login">
                     <label for="email" class=""><b>Email: </b></label>
-                    <input type="text" name="email" id="email" class="">
+                    <input type="text" name="email" id="email" class="input-text">
                 </div>
                 
-
                 <!-- password  -->
                 <div class="input-box-login">
                     <label for="password" class=""><b>Wachtwoord</b>: </label>
-                    <input type="password" name="password" id="password" class="">
+                    <input type="password" name="password" id="password" class="input-text">
                 </div>
                 
-
-                <input type="submit" name="submit" value="inloggen" class="button-green">
+                <div class="submit-button-login">
+                    <input type="submit" name="submit" value="inloggen" class="button-green">
+                </div>
                 
                 <!-- Erorrs  -->
-                @error('email')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('password')
-                    <div class="">{{$message}}</div>
-                @enderror
-                <p>Nog geen account? <a href="{{route('signup')}}" class="">klik hier</a></p>
+                
+                    @if (!$errors->isEmpty())
+                        <div class="error-box">
+                            
+                            @error('email')
+                                <div class="">{{$message}}</div>
+                            @enderror
+                            @error('password')
+                                <div class="">{{$message}}</div>
+                            @enderror
+                        </div>
+                    @endif
+                    <p>Nog geen account? <a href="{{route('signup')}}" class="hover:underline">klik hier</a></p>
             </form>
             
         </div>    

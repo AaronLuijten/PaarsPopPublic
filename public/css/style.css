@@ -6,36 +6,60 @@
     background-color: #7E22CE;
     border-radius: 4%;
     padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     color: white;
+    box-shadow: 0px 3px 5px #4ade80;
 }
 
 .input-box-login{
     display: grid;
+    margin-top: 20px;
 }
 
-.bold-header-login{
-    color: white;
-    font-size: medium;
+.input-text{
+    border-radius: 25px;
+    color: black;
+    padding-left: 5px;
+}
+
+.submit-button-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
 }
 
 
 .button-green{
-    border-radius: 2%;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border-color: #4ade80;
+    border-width: 2px;
     padding: 1%;
     color: black;
     background-color: white;
-    border-color: #7E22CE;
+    
 }
 
 .button-green:hover{
-    border-radius: 2%;
-    padding: 1%;
     color: white;
-    background-color: #7E22CE;
-    border-color: #7E22CE;
+    background-color: #4ade80;
+    border-color: #4ade80;
     transition: 200ms;
+
+
 }h1{
     font-family: "BebasNeue";
     font-weight: bold;
     font-size: 60px;
+}
+
+.error-box
+{
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: red;
+    padding: 10px;
+    margin-top: 15px;
 }
