@@ -34,4 +34,8 @@
     background-color: #7E22CE;
     border-color: #7E22CE;
     transition: 200ms;
+}h1{
+    font-family: "BebasNeue";
+    font-weight: bold;
+    font-size: 60px;
 }
