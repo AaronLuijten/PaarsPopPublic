@@ -1,0 +1,37 @@
+/* ↓ login ↓ */
+.flex-container-login{
+    display: flex;
+}   
+.form-box-login{
+    background-color: #7E22CE;
+    border-radius: 4%;
+    padding: 1%;
+    color: white;
+}
+
+.input-box-login{
+    display: grid;
+}
+
+.bold-header-login{
+    color: white;
+    font-size: medium;
+}
+
+
+.button-green{
+    border-radius: 2%;
+    padding: 1%;
+    color: black;
+    background-color: white;
+    border-color: #7E22CE;
+}
+
+.button-green:hover{
+    border-radius: 2%;
+    padding: 1%;
+    color: white;
+    background-color: #7E22CE;
+    border-color: #7E22CE;
+    transition: 200ms;
+}
