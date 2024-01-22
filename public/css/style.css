@@ -1,3 +1,161 @@
+/* ↓global↓ */
+
+.button-green{
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border-color: #4ade80;
+    border-width: 2px;
+    padding: 1%;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 1px 2px black;
+    
+}
+
+.button-green:hover{
+    color: white;
+    background-color: #4ade80;
+    border-color: #4ade80;
+    transition: 200ms;
+    box-shadow: 0px 3px 10px black;
+
+
+}
+
+h1{
+    font-family: "BebasNeue";
+    font-weight: bold;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-body{
+    width: 80%;
+}
+
+.btn_outline{
+    background-color: #FFFFFF;
+    
+    border: 3px solid #4ADE80;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 4px 12px;
+    box-shadow: 0px 4px 9px 0px #00000066;
+
+    color: black;
+}
+
+.btn_outline:hover{
+    box-shadow: 0px 10px 9px 0px #00000066;
+    transition: 300ms;
+}
+
+.btn_filled{
+    background-color: #4ADE80;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 4px 12px;
+    box-shadow: 0px 4px 9px 0px #00000066;
+}
+
+.btn_filled:hover{
+    box-shadow: 0px 10px 9px 0px #00000066;
+    transition: 300ms;
+}
+
+/* ↓ Menu ↓ */
+
+.menu{
+    background-color: #7E22CE;
+    display: flex;
+    justify-content: center;
+}
+
+.container-menu{
+    background-color: #7E22CE;
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.title-menu{
+    font-family: "Lobster";
+    font-size: 60px;
+}
+
+.row1{
+
+}
+
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.row3{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.menu-link{
+    margin-right: 3rem;
+    font-family: "open sans";
+    font-size: 20px;
+}
+
+.menu-link.active{
+    text-decoration: underline solid 2px #4ADE80;
+    text-underline-offset: 8px;
+}
+
+.text1-menu{
+    font-family: "open sans";
+    font-style: italic;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.text2-menu{
+    font-family: "open sans";
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-right: 5px;
+    color: #4ADE80;
+}
+
+/* ↓ body ↓ */
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#bodyContainer{
+    flex: 1;
+}
+/* ↓ Footer ↓ */
+
+.footer{
+    background-color: #7E22CE;
+    color: white;
+    /* margin-top: auto; */
+    width: 100%;
+}
+
 /* ↓ login ↓ */
 .flex-container-login{
     display: flex;
@@ -99,43 +257,6 @@
     justify-self: center;
     width: 50%;
 }
-/* ↓global↓ */
-
-.button-green{
-    font-weight: bold;
-    text-transform: capitalize;
-    border-radius: 5px;
-    border-color: #4ade80;
-    border-width: 2px;
-    padding: 1%;
-    color: black;
-    background-color: white;
-    box-shadow: 0px 1px 2px black;
-    
-}
-
-.button-green:hover{
-    color: white;
-    background-color: #4ade80;
-    border-color: #4ade80;
-    transition: 200ms;
-    box-shadow: 0px 3px 10px black;
-
-
-}
-
-h1{
-    font-family: "BebasNeue";
-    font-weight: bold;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-
-.container-body{
-    width: 80%;
-}
 
 /* ↓create-accomodation↓ */
 
@@ -159,128 +280,6 @@ body{
 
 .box-regular{
     display:grid;
-}
-
-/* ↓ Menu ↓ */
-
-.menu{
-    background-color: #7E22CE;
-    display: flex;
-    justify-content: center;
-}
-
-.container-menu{
-    background-color: #7E22CE;
-    color: white;
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-}
-
-.title-menu{
-    font-family: "Lobster";
-    font-size: 60px;
-}
-
-.row1{
-
-}
-
-.row2{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.row3{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.btn_outline{
-    background-color: #FFFFFF;
-    
-    border: 3px solid #4ADE80;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 4px 12px;
-    box-shadow: 0px 4px 9px 0px #00000066;
-
-    color: black;
-}
-
-.btn_outline:hover{
-    box-shadow: 0px 10px 9px 0px #00000066;
-    transition: 300ms;
-}
-
-.btn_filled{
-    background-color: #4ADE80;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 4px 12px;
-    box-shadow: 0px 4px 9px 0px #00000066;
-}
-
-.btn_filled:hover{
-    box-shadow: 0px 10px 9px 0px #00000066;
-    transition: 300ms;
-}
-
-.menu-link{
-    margin-right: 3rem;
-    font-family: "open sans";
-    font-size: 20px;
-}
-
-.text1-menu{
-    font-family: "open sans";
-    font-style: italic;
-    font-size: 18px;
-    margin-right: 5px;
-}
-
-.text2-menu{
-    font-family: "open sans";
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 18px;
-    margin-right: 5px;
-    color: #4ADE80;
-}
-
-.input-text{
-    border-radius: 15px;
-    padding-left: 10px;
-    color: black;
-    height: 30px;
-    font-weight: 500;
-}
-
-.input-text:hover{
-    box-shadow: 2px 2px 4px black;
-    transition: 200ms;
-}
-
-.error-box{
-    border: 1px solid red;
-    border-radius: 10px;
-    justify-content: center;
-    padding: 20px;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.radio-button{
-    height: 25px;
-    width: 25x;
 }
 
 /* ↓edit-create↓ */

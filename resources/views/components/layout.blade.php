@@ -28,7 +28,7 @@
             @endif
         </div>
         <div class="row2">
-            <a href="{{route('index')}}" class="menu-link">home</a>
+            <a href="{{route('index')}}" class="{{ Request::is('/') ? 'active' : '' }} menu-link">home</a>
             <a href="{{route('index')}}" class="menu-link">Over ons</a>
             <a href="{{route('index')}}" class="menu-link">Contact</a>
         </div>
@@ -39,6 +39,9 @@
     </div>
 </nav>
 <body>
+    <div id="bodyContainer">
+
+    </div>
     <nav>
         <div name="menubar" class="">
             <ul class=''>
@@ -91,5 +94,9 @@
         </div>
         
     </footer>
+
+    <footer class="footer">
+        test
+    <footer>
 </body>
 </html>
