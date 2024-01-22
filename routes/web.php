@@ -35,27 +35,27 @@ Route::middleware(['auth', 'web'])->group(function ()
 
         Route::get('/delete/{Accomodation}', [AccomodationController::class, 'deleteAc'])->name('deleteAc');
 
-        
+
     }); 
-    // Profile
-    Route::prefix('/profile')->group(function ()
-    {   
-        // view
-        Route::get('/', [Controller::class, 'profileView'])->name('profileView');
+        // Profile
+        Route::prefix('/profile')->group(function ()
+        {   
+            // view
+            Route::get('/', [Controller::class, 'profileView'])->name('profileView');
 
-        // edit profile
-        Route::get('/edit', [Controller::class, 'editView'])->name('editView');
-        Route::post('/edit', [Controller::class, 'profileViewPost'])->name('editViewPost');
+            // edit profile
+            Route::get('/edit', [Controller::class, 'editView'])->name('editView');
+            Route::post('/edit', [Controller::class, 'profileViewPost'])->name('editViewPost');
 
-        // delete profile
-        Route::get('/delete/confirm', [Controller::class, 'deleteView'])->name('deleteProfile');
-        Route::get('/delete', [Controller::class, 'deleteConfirmed'])->name('deleteConfirmed');
+            // delete profile
+            Route::get('/delete/confirm', [Controller::class, 'deleteView'])->name('deleteProfile');
+            Route::get('/delete', [Controller::class, 'deleteConfirmed'])->name('deleteConfirmed');
 
-        // change password
-        Route::get('/changePassword', [Controller::class, 'changePassword'])->name('changePassword');
-        Route::post('/changePassword', [Controller::class, 'TrychangePassword']);
-    });
-});
+            // change password
+            Route::get('/changePassword', [Controller::class, 'changePassword'])->name('changePassword');
+            Route::post('/changePassword', [Controller::class, 'TrychangePassword']);
+        });
+    }); 
 // home
 Route::get('/',[Controller::class, 'index'])->name('index');
 Route::get('/plattegrond', [Controller::class, 'map'])->name('showMap');
