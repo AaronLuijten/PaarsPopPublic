@@ -5,36 +5,45 @@
         @endphp
         <div class="flex-container-show">
             <div class="data-box-show">
-                <h2 class="">Je weekend bij Paarspop</h2>
+                <h2>Jouw weekend bij Paarspop</h2>
                 <div class="box-info">
-                    <h2 class="">Gegevens:</h2>
-                    <div class="">
-                        <p>Naam: {{Auth::user()->first_name}} {{Auth::user()->last_name}} </p>
-                        <p>Email: {{Auth::user()->email}}</p>
-                        <p>Telefoon nummer: {{Auth::user()->phonenumber ?? 'Geen nummer gevonden'}}</p>
+                    <h3>Gegevens:</h3>
+                    <div class="name_mail_number-box">
+                        <div class="placeholder-user-info">
+                            <p>Naam: </p>
+                            <p>Email: </p>
+                            <p>Telefoon nummer: </p>
+                        </div>
+                        <div class="data-user-info">
+                            <p>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</p>
+                            <p>{{Auth::user()->email}}</p>
+                            <p>{{Auth::user()->phonenumber ?? 'Geen nummer gevonden'}}</p>
+                        </div>
                     </div>
-                    
-                    <h2 class="">Reservering: </h2>
-                    @if (!Auth::user()->accomodation)
-                        <div class="">
-                            <div class="" role="alert">
-                                <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
-                                <p>We willen je vragen dat even <a href="{{route('create')}}" class="">hier</a> te doen.</p>
+                    <div>
+                        
+                        @if (!Auth::user()->accomodation)
+                            <div class="">
+                                <div class="" role="alert">
+                                    <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
+                                    <p>We willen je vragen dat even <a href="{{route('create')}}" class="">hier</a> te doen.</p>
+                                    
+                                </div>
+                                @if($errors->any())
+                                    @foreach ($errors as $error)
+                                        <div class="">{{$error}}</div>
+                                    @endforeach
+                                @endif
+                                <div class="alert alert-succes">
+                                    <div class="succes-alert">{{session('success')}}</div>
+                                </div>
                                 
                             </div>
-                            @if($errors->any())
-                                @foreach ($errors as $error)
-                                    <div class="">{{$error}}</div>
-                                @endforeach
-                            @endif
-                            <div class="alert alert-succes">
-                                <div class="">{{session('success')}}</div>
-                            </div>
-                            
                         </div>
-                    @else
-                    <div class="">
-                        <div>
+                        @else
+                    <h2>Reservering: </h2>
+                    <div class="info-data-showing">
+                        <div class="data-types-text">
                             <p>Aanwezig: </p>
                             @if($accomodation->presence != 0)
                             <p>Blijf je slapen: </p>
@@ -50,14 +59,14 @@
                             <p>Blijf je zondag avond eten: </p>
                             @endif
                         </div>
-                        <div class="">
+                        <div class="data-info-text">
                             @if($accomodation->presence == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif </p>
                             @if ($accomodation->presence != 0)
                                 @if($accomodation->stay_over == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif</p>
                                 @if($accomodation->stay_over == 1)
                                 <p>{{$accomodation->accomodation_type}}</p>
-                                <p>{{$accomodation->accomodation_width}}</p>
-                                <p>{{$accomodation->accomodation_length}}</p>
+                                <p>{{$accomodation->accomodation_width}}M</p>
+                                <p>{{$accomodation->accomodation_length}}M</p>
                                 @endif
                                 <p>@if ($accomodation->number_of_guests_weekend >= 1) {{"Het hele weekend"}}
                                                         @else @if($accomodation->number_of_guest_sat >= 1) {{"Alleen zaterdag"}}
@@ -75,9 +84,9 @@
                             
                         
                     </div>
-                    <div>
-                        <button class=""><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
-                        <button class=""><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
+                    <div class="mt-3">
+                        <button class="btn_filled"><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
+                        <button class="btn_filled"><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
                     </div>
                   </div>
                         @endif
