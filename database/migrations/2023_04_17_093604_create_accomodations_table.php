@@ -23,9 +23,9 @@ class CreateAccomodationsTable extends Migration
             $table->integer('number_of_guests_weekend')->nullable();
             $table->integer('number_of_guest_sat')->nullable();
             $table->integer('number_of_guest_sun')->nullable();
-            $table->boolean('dinner_sat');
-            $table->boolean('brunch_sun');
-            $table->boolean('dinner_sun');  
+            $table->boolean('dinner_sat')->default(0);
+            $table->boolean('brunch_sun')->default(0);
+            $table->boolean('dinner_sun')->default(0);  
             $table->integer('user_id');
             $table->timestamps();
         });

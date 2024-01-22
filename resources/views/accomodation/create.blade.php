@@ -55,10 +55,10 @@
                                     <label for="accomodation_anders" id="label_text" class="">Anders</label>
                                 </div>
 
-                                <div id="accomodation_anders_div" style="display: none;" class="box-margin">
+                                <div id="accomodation_anders_div" style="display: none;" class="">
                                     <label for="accomodation_anders_txt" id="label_text" class="flex"><p class="star">*&nbsp;</p>Vul in waarmee je blijft slapen: </label>
                                     <input type="text" name="accomodation_type_txt" id="accomodation_anders_txt"  class="input-text">
-                            
+                                </div>
                                 {{-- verblijf lengte / breedte --}}
                                 <div class="box-regular">
                                         <label for="accomodation_width" id='accomodation_width' class="">Breedte in meter:</label>
@@ -90,7 +90,7 @@
                             <div class="box-margin">
                                 {{-- Met hoeveel personen?  --}}
                                 <label for="guests"  class="">Met hoeveel personen kom je?: </label>
-                                <input type="number" name="" id="guests" class="">
+                                <input type="number" name="" id="guests" class="input-text">
                             </div>
                             
                         </div>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div id="submit_div" style='display: block;'>
-                        <input type="submit" value="Opslaan" id="submit" class="button-green">
+                        <input type="submit" value="Opslaan" id="submit" class="btn_outline">
                     </div>
 
                     @if (!$errors->isEmpty())

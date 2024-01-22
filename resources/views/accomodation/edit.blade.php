@@ -1,24 +1,26 @@
 <x-layout>
-    <div class="p-2 flex justify-center">
-        <div class="shadow-2xl rounded-md bg-purple-500 mt-5 text-sm lg:text-xl p-3 w-fit flex flex-row justify-center">
-            <form action="" method="POST" class="pl-2 pr-2 pb-2 text-white flex flex-col border border-transparent rounded-md m-0 items-center ">
+    <div class="flex-container-edit">
+        <div class="form-box-edit">
+            <form action="" method="POST" class="">
                 @csrf
-                <div class="text-green-300">
-                    <b>Verblijf wijzigen</b>
+                <div class="">
+                    <h2>Verblijf wijzigen</h2>
                 </div>
                 {{-- Ben je aanwezig? --}}
-                <div class=" mb-3">
-                    <p class="text-green-300">Ben je aanwezig?: </p>
-                    <label for="presence_yes" class="text-green-300">Ja</label>
-                    <input type="radio" name="presence" id="presence_yes" @if($accomodation->presence == 1)checked @endif value=1>
-
-                    <label for="presence_no" class="text-green-300">Nee</label>
-                    <input type="radio" name="presence" id="presence_no" @if($accomodation->presence == 0)checked @endif value=0>
+                <div class="box-margin">  
+                        <div class="flex"><p class="star">*&nbsp;</p>Ben je aanwezig?: </div>
+                    <div class="flex">
+                        <input type="radio" name="presence" id="presence_yes" @if($accomodation->presence == 1)checked @endif value=1>
+                        <label for="presence_yes" class="">Ja&nbsp;</label>
+                        <input type="radio" name="presence" id="presence_no" @if($accomodation->presence == 0)checked @endif value=0>
+                        <label for="presence_no" class="">Nee</label>
+                    </div>
                 </div>
-                <div id="full_form" style="display: none;" class="items-center p-5">
+                
+                <div id="full_form" style="display: none;" class="box-margin">
                     {{-- Blijf je slapen? --}}
                     <div> 
-                        <p class="text-green-300">Blijf je slapen?</p>
+                        <div class="flex"><p class="star">*&nbsp;</p>Blijf je slapen?</div>
                         <input type="radio" name="stay_over" id="sleep_yes" value=1 @if($accomodation->stay_over == 1)checked @endif  onclick="showAccomodationSpecs()">
                         <label for="sleep_yes">Ja</label>
 
@@ -26,35 +28,35 @@
                         <label for="sleep_no">Nee</label>
                     </div>
                     {{-- type verblijf? --}}
-                    <div class="mb-3 flex flex-col">
+                    <div class="box-margin">
                         <div  id="accomodation_specs" style="display: none;">
-                            <p class="text-green-300">Waarmee blijf je slapen: </p>
+                            <p class="">Waarmee blijf je slapen: </p>
                             <div>
                                 <input type="radio" name="accomodation_type_rad" id="accomodation_tent" value="tent" @if($accomodation->accomodation_type == 'tent')checked @endif onchange="changeLabelText(this)">
-                                <label for="accomodation_tent" id="label_text" class="text-green-300">tent</label>
+                                <label for="accomodation_tent" id="label_text" class="">tent</label>
                             </div>
                             <div>
                                 <input type="radio" name="accomodation_type_rad" id="accomodation_anders" value="anders" @if($accomodation->accomodation_type != 'tent' && $accomodation->accomodation_type != null)checked @endif onchange="changeLabelText(this)">
-                                <label for="accomodation_anders" id="label_text" class="text-green-300">Anders</label>
+                                <label for="accomodation_anders" id="label_text" class="">Anders</label>
                             </div>
 
                             <div id="accomodation_anders_div" style="display: none;">
-                                <label for="accomodation_anders_txt" id="label_text" class="text-green-300">Vul in waarmee je blijft slapen: </label><br>
-                                <input type="text" name="accomodation_type_txt" id="accomodation_anders_txt"  @if($accomodation->accomodation_type) value={{$accomodation->accomodation_type}} @endif class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                                <label for="accomodation_anders_txt" id="label_text" class="">Vul in waarmee je blijft slapen: </label><br>
+                                <input class="input-text" type="text" name="accomodation_type_txt" id="accomodation_anders_txt" class=""  @if($accomodation->accomodation_type) value={{$accomodation->accomodation_type}} @endif class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
                             </div>
                             
                         
                             {{-- verblijf lengte / breedte --}}
                             <div class="flex flex-col">
-                                    <label for="accomodation_width" id='accomodation_width' class="text-green-300">Breedte in meter:</label>
-                                    <input type="number" name="accomodation_width" @if($accomodation->accomodation_length) value={{$accomodation->accomodation_length}}@endif placeholder="Rond af naar boven als nodig"  id="accomodation_width" value="{{old('accomodation_width')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300 ">
-                                    <label for="accomodation_lenght" id='accomodation_length' class="text-green-300">Lengte in meter: </label>
-                                    <input type="number" name="accomodation_length" @if($accomodation->accomodation_width) value={{$accomodation->accomodation_width}}@endif placeholder="Rond af naar boven als nodig" id="accomodation_length" value="{{old('accomodation_width')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                                    <label for="accomodation_width" id='accomodation_width' class="">Breedte in meter:</label>
+                                    <input class="input-text" type="number" name="accomodation_width" @if($accomodation->accomodation_length) value={{$accomodation->accomodation_length}}@endif placeholder="Rond af naar boven als nodig"  id="accomodation_width" value="{{old('accomodation_width')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300 ">
+                                    <label for="accomodation_lenght" id='accomodation_length' class="">Lengte in meter: </label>
+                                    <input class="input-text" type="number" name="accomodation_length" @if($accomodation->accomodation_width) value={{$accomodation->accomodation_width}}@endif placeholder="Rond af naar boven als nodig" id="accomodation_length" value="{{old('accomodation_width')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
                             </div>
                         </div>
                         {{-- Wanneer ben je er? --}}
-                        <div id="presence_when" class="flex flex-col">
-                            <p class="text-green-300">Wanneer ben je er?: </p>
+                        <div id="presence_when" class="box-margin">
+                            <p class="">Wanneer ben je er?: </p>
                             <div>
                                 <input type="radio" name="presence_day" id="all_weekend" @if($accomodation->number_of_guests_weekend) checked @endif value="weekend" onclick="changeInputName()">
                                 <label for="all_weekend">Zaterdag en zondag (22 en 23 juni)</label>
@@ -72,14 +74,17 @@
                             </div>
                         </div>
                         {{-- Met hoeveel personen?  --}}
-                        <label for="guests"  class="text-green-300">Met hoeveel personen kom je?: </label>
-                        <input type="number" name="" id="guests"    @if($accomodation->number_of_guests_weekend) value={{$accomodation->number_of_guests_weekend}}
-                                                                    @else @if($accomodation->number_of_guest_sat) value={{$accomodation->number_of_guest_sat}}
-                                                                    @else @if($accomodation->number_of_guest_sun) value={{$accomodation->number_of_guest_sun}}
-                                                                    @endif @endif @endif class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                        <div class="box-margin">
+                            <label for="guests"  class="">Met hoeveel personen kom je?: </label>
+                            <input class="input-text" type="number" name="" id="guests"    @if($accomodation->number_of_guests_weekend) value={{$accomodation->number_of_guests_weekend}}
+                                                                        @else @if($accomodation->number_of_guest_sat) value={{$accomodation->number_of_guest_sat}}
+                                                                        @else @if($accomodation->number_of_guest_sun) value={{$accomodation->number_of_guest_sun}}
+                                                                        @endif @endif @endif class="">
+                        </div>
+                        
                         {{-- Blijf je eten? --}}
-                        <div>
-                            <p class="text-green-300">(Wanneer) blijf je eten?: </p>
+                        <div class="box-margin">
+                            <p class="">(Wanneer) blijf je eten?: </p>
                             <div id="saturday">
                                 <input type="checkbox" name="dinner_sat" id="dinner_sat" @if($accomodation->dinner_sat) checked @endif value=1 onchange="changeCheckboxName()">
                                 <input type="hidden" name="dinner_sat" id="hidden_dinner_sat" value=0>
@@ -146,11 +151,11 @@
                     
                     
                 
-                <div id="submit_div" style='display: none;'>
-                    <input type="submit" value="Aanpassingen Opslaan" id="submit" class="text-green-400 p-1 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-green-500 hover:font-bold hover:scale-105 transition duration-300">
+                <div id="submit_div" style='display: none;' class="box-margin">
+                    <input type="submit" value="Aanpassingen Opslaan" id="submit" class="btn_outline">
                 </div>
                 @foreach ($errors->all() as $error)
-                    <div class="text-red-500">{{$error}}</div>
+                    <div class="">{{$error}}</div>
                 @endforeach
             </form>
             
