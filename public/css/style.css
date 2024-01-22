@@ -86,9 +86,12 @@
     transition: 200ms;
 
 
-}h1{
+}
+
+h1{
     font-family: "BebasNeue";
     font-weight: bold;
+}
 body{
     margin: 0;
     padding: 0;
