@@ -8,7 +8,7 @@
                 <input type="password" value="{{old('password')}}" name="password" id="password" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
                 <label for="newPassword" class="text-green-400 font-bold pt-1">nieuw wachtwoord: </label>
                 <input type="password" name="newPassword" id="newPassword" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
-                <label for="newPasswordCon" class="text-green-400 font-bold pt-1">oud wachtwoord: </label>
+                <label for="newPasswordCon" class="text-green-400 font-bold pt-1">herhaal niew wachtwoord: </label>
                 <input type="password" name="newPasswordCon" id="newPasswordCon" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
 
                 <input type="submit" value="wachtwoord aanpassen" id="submit" class="mt-2 text-green-400 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-green-500 hover:font-bold hover:scale-105 transition duration-300">
