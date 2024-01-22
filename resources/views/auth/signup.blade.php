@@ -1,101 +1,69 @@
 <x-layout>
-    <div class="flex-container-signup">
-        <div class="form-box-signup">
-            <form action="" method="POST" class="">
+    <div class="p-2 flex justify-center">
+        <div class="shadow-md rounded-md bg-purple-400 mt-5 text-sm lg:text-xl p-3 w-fit flex flex-row justify-center">
+            <form action="" method="POST" class="pl-2 pr-2 pb-2 text-white flex flex-col rounded-md m-0 ">
                 @csrf
-                <div class="">
+                <div class="flex justify-center text-green-300">
                     <b>Registreren</b>
                 </div>
+                <!-- First Name -->
+                <label for="first_name" class="text-green-300"><b>Voornaam:</b> </label>
+                <input type="text" name="first_name" id="first_name" value="{{old('first_name')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
 
-                <div class="flex-grid-signup">
-                    <!-- First Name --> 
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="first_name" class="flex"><p class="star">*&nbsp;</p>Voornaam:</label>
-                            <input type="text" name="first_name" id="first_name" value="{{old('first_name')}}" class="input-text">
-                        </div>
-                    </div>
-                    <!-- Last Name -->
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="last_name" class="flex"><p class="star">*&nbsp;</p>Achternaam </label>
-                            <input type="text" name="last_name" id="last_name" value="{{old('last_name')}}" class="input-text">
-                        </div>
-                    </div>
-
-                     <!-- email -->
-                     <div class="item-full-signup">
-                        <div class="input-box-signup">
-                            <label for="email" class="flex"><p class="star">*&nbsp;</p>Email:</label>
-                            <input type="text" name="email" id="email" value="{{old('email')}}" class="input-text">
-                        </div>
-                     </div>
-                     
-                    <!-- phonenumber -->
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="phonenumber" class="flex"><p class="star">*&nbsp;</p>Telefoon:</label>
-                            <input type="text" name="phonenumber" id="phonenumber" value="{{old('phonenumber')}}" class="input-text">
-                        </div>
-                    </div>
-
-                    <!-- date_of_birth -->
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="date_of_birth" class="flex"><p class="star">*&nbsp;</p> Geboorte datum:</label>
-                            <input type="date" name="date_of_birth" id="date_of_birth" value="{{old('date_of_birth')}}" class="input-text">
-                        </div>
-                    </div>
-                    
-                    <!-- password  -->
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="password" class="flex"><p class="star">*&nbsp;</p>Wachtwoord:</label>
-                            <input type="password" name="password" id="password" class="input-text">
-                        </div>
-                    </div>
-
-                    <!-- password_confirm  -->
-                    <div class="item-half-signup">
-                        <div class="input-box-signup">
-                            <label for="password_confirm" class="flex"><p class="star">*&nbsp;  </p> Herhaal wachtwoord: </label>
-                            <input type="password" name="password_confirm" id="password_confirm" class="input-text">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="button-box-signup">
-                    <input type="submit" name="submit" value="nu registreren" class="button-green">
-                </div>
+                <!-- Last Name -->
+                <label for="last_name" class="text-green-300"><b>Achternaam:</b> </label>
+                <input type="text" name="last_name" id="last_name" value="{{old('last_name')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
                 
+                <!-- email -->
+                <label for="email" class="text-green-300"><b>Email:</b> </label>
+                <input type="text" name="email" id="email" value="{{old('email')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
+
+                <!-- phonenumber -->
+                <label for="phonenumber" class="text-green-300"><b>Telefoon:</b> </label>
+                <input type="text" name="phonenumber" id="phonenumber" value="{{old('phonenumber')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
+
+                <!-- date_of_birth -->
+                <label for="date_of_birth" class="text-green-300"><b>Geboorte datum:</b> </label>
+                <input type="date" name="date_of_birth" id="date_of_birth" value="{{old('date_of_birth')}}" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
+
+                <!-- password  -->
+                <label for="password" class="text-green-300"><b>Wachtwoord:</b> </label>
+                <input type="password" name="password" id="password" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
+
+                <!-- password_confirm  -->
+                <label for="password_confirm" class="text-green-300"><b>Voer het wachtwoord nog een keer in:</b> </label>
+                <input type="password" name="password_confirm" id="password_confirm" class="text-purple-400 focus:bg-purple-400 focus:text-green-400 font-bold transition duration-300">
+                <br>
+
+                <input type="submit" name="submit" value="nu registreren" class="mt-2 text-green-400 border border-solid border-black bg-purple-500 rounded-md  hover:bg-white hover:text-green-500 hover:font-bold hover:scale-105 transition duration-300">
                 <!-- Erorrs  -->
-                @if (!$errors->isEmpty())
-                    <div class="error-box">
-                        @error('first_name')
-                        <div class="">{{$message}}</div>
-                        @enderror
-                        @error('last_name')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('email')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('phonenumber')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('date_of_birth')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('password')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('password_confirm')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                    </div>
-                @endif
-                
-                
+                @error('first_name')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('last_name')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('email')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('phonenumber')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('date_of_birth')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('password')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
+                @error('password_confirm')
+                    <div class="text-red-600">{{$message}}</div>
+                @enderror
             </form>
             
         </div>    
