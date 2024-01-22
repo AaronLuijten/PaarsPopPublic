@@ -1,5 +1,78 @@
-h1{
-    font-family: "BebasNeue";
-    font-weight: bold;
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-body{
+    width: 80%;
+}
+
+/* ↓ Menu ↓ */
+
+.menu{
+    background-color: #7E22CE;
+    display: flex;
+    justify-content: center;
+}
+
+.container-menu{
+    background-color: #7E22CE;
+    color: white;
+    display: flex;
+    width: 80%;
+}
+
+.title-menu{
+    font-family: "Lobster";
     font-size: 60px;
+}
+
+.row1{
+
+}
+
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.row3{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.btn_outline{
+    background-color: #FFFFFF;
+    
+    border: 3px solid #4ADE80;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 4px 12px;
+    box-shadow: 0px 4px 9px 0px #00000066;
+}
+
+.btn_outline:hover{
+    box-shadow: 0px 10px 9px 0px #00000066;
+    transition: 300ms;
+}
+
+.btn_filled{
+    background-color: #4ADE80;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 4px 12px;
+    box-shadow: 0px 4px 9px 0px #00000066;
+}
+
+.btn_filled:hover{
+    box-shadow: 0px 10px 9px 0px #00000066;
+    transition: 300ms;
 }

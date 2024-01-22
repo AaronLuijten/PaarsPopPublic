@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: 'Lobster';
+    src: url('/public/fonts/Lobster-Regular.ttf') format('opentype');
+}
+
+@font-face {
     font-family: 'BebasNeue';
     src: url('/public/fonts/BebasNeue-Regular.ttf') format('opentype');
 }
