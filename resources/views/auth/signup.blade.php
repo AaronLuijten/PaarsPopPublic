@@ -4,7 +4,7 @@
             <form action="" method="POST" class="">
                 @csrf
                 <div class="">
-                    <b>Registreren</b>
+                    <h2>REGISTREREN</h2>
                 </div>
 
                 <div class="flex-grid-signup">
@@ -67,37 +67,37 @@
                 <div class="button-box-signup">
                     <input type="submit" name="submit" value="nu registreren" class="button-green">
                 </div>
-                
-                <!-- Erorrs  -->
-@if (!$errors->isEmpty())
-                    <div class="error-box">
-                @error('first_name')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('last_name')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('email')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('phonenumber')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('date_of_birth')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('password')
-                    <div class="">{{$message}}</div>
-                @enderror
-                @error('password_confirm')
-                    <div class="">{{$message}}</div>
-                @enderror
-</div>
-                @endif
-                
-                
             </form>
             
+            <div class="error-container-signup">
+                <!-- Erorrs  -->
+                @if (!$errors->isEmpty())
+                <div class="error-box">
+                    @error('first_name')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('last_name')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('email')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('phonenumber')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('date_of_birth')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('password')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('password_confirm')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                </div>
+                @endif
+            </div>
+
         </div>    
     </div>
 </x-layout>

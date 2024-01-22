@@ -504,9 +504,6 @@ video {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.ml-3 {
-  margin-left: 0.75rem;
-}
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -534,16 +531,6 @@ video {
 .hidden {
   display: none;
 }
-.h-12 {
-  height: 3rem;
-}
-.h-14 {
-  height: 3.5rem;
-}
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -560,8 +547,8 @@ video {
 .w-full {
   width: 100%;
 }
-.flex-grow {
-  flex-grow: 1;
+.w-5\/6 {
+  width: 83.333333%;
 }
 .resize {
   resize: both;
@@ -577,9 +564,6 @@ video {
 }
 .items-center {
   align-items: center;
-}
-.items-baseline {
-  align-items: baseline;
 }
 .justify-start {
   justify-content: flex-start;
@@ -613,14 +597,8 @@ video {
 .border-b-0 {
   border-bottom-width: 0px;
 }
-.border-b-4 {
-  border-bottom-width: 4px;
-}
 .border-t-2 {
   border-top-width: 2px;
-}
-.border-t-4 {
-  border-top-width: 4px;
 }
 .border-solid {
   border-style: solid;
@@ -635,14 +613,6 @@ video {
 }
 .border-transparent {
   border-color: transparent;
-}
-.border-b-green-400 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(74 222 128 / var(--tw-border-opacity));
-}
-.border-t-green-400 {
-  --tw-border-opacity: 1;
-  border-top-color: rgb(74 222 128 / var(--tw-border-opacity));
 }
 .bg-green-400 {
   --tw-bg-opacity: 1;
@@ -682,14 +652,8 @@ video {
 .p-5 {
   padding: 1.25rem;
 }
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-.pl-1 {
-  padding-left: 0.25rem;
 }
 .pl-2 {
   padding-left: 0.5rem;
@@ -699,9 +663,6 @@ video {
 }
 .pt-1 {
   padding-top: 0.25rem;
-}
-.pt-2 {
-  padding-top: 0.5rem;
 }
 .align-middle {
   vertical-align: middle;
@@ -762,11 +723,6 @@ video {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -815,10 +771,6 @@ video {
 }
 .hover\:font-bold:hover {
   font-weight: 700;
-}
-.hover\:text-green-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(134 239 172 / var(--tw-text-opacity));
 }
 .hover\:text-green-500:hover {
   --tw-text-opacity: 1;
