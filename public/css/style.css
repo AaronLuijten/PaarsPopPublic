@@ -107,7 +107,32 @@ body{
     width: 80%;
 }
 
+/* ↓create-accomodation↓ */
+
+.flex-container-create{
+    display: flex;
+    justify-content: center;
+}
+
+.form-box-create{
+    background-color: #7E22CE;
+    border-radius: 10px;
+    padding:30px;
+    color: white;
+    font-weight: bold;
+}
+
+.box-margin{
+    display: grid;
+    margin-top: 30px;
+}
+
+.box-regular{
+    display:grid;
+}
+
 /* ↓ Menu ↓ */
+
 
 .menu{
     background-color: #7E22CE;
@@ -201,4 +226,9 @@ body{
     padding: 20px;
     margin: 10px;
     font-weight: bold;
+}
+
+.radio-button{
+    height: 25px;
+    width: 25x;
 }
