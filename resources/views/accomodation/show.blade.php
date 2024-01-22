@@ -3,37 +3,37 @@
         @php
         $accomodation = Auth::user()->accomodation  
         @endphp
-        <div class="flex justify-center">
-            <div class="bg-purple-500 flex items-center text-sm lg:text-xl flex-col mt-5 rounded-md shadow-2xl w-fit p-3">
-                <h2 class="text-green-400 font-bold mb-5">Je weekend bij Paarspop</h2>
-                <div class="flex items-start flex-col">
-                    <h2 class="text-green-400 font-bold mb-2">Gegevens:</h2>
-                    <div class="bg-purple-600 p-2 rounded-md font-semibold text-green-400 text-lg w-full mb-4">
+        <div class="flex-container-show">
+            <div class="data-box-show">
+                <h2 class="">Je weekend bij Paarspop</h2>
+                <div class="box-info">
+                    <h2 class="">Gegevens:</h2>
+                    <div class="">
                         <p>Naam: {{Auth::user()->first_name}} {{Auth::user()->last_name}} </p>
                         <p>Email: {{Auth::user()->email}}</p>
                         <p>Telefoon nummer: {{Auth::user()->phonenumber ?? 'Geen nummer gevonden'}}</p>
                     </div>
                     
-                    <h2 class="text-green-400 font-bold mb-2">Reservering: </h2>
+                    <h2 class="">Reservering: </h2>
                     @if (!Auth::user()->accomodation)
-                        <div class="flex items-center flex-col text-xs lg:text-xl mt-5 w-fit p-3">
-                            <div class="text-green-400 font-bold bg-purple-700 p-2 rounded-md bg-opacity-50 flex flex-col items-center" role="alert">
+                        <div class="">
+                            <div class="" role="alert">
                                 <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
-                                <p>We willen je vragen dat even <a href="{{route('create')}}" class="hover:underline">hier</a> te doen.</p>
+                                <p>We willen je vragen dat even <a href="{{route('create')}}" class="">hier</a> te doen.</p>
                                 
                             </div>
                             @if($errors->any())
                                 @foreach ($errors as $error)
-                                    <div class="text-red-500">{{$error}}</div>
+                                    <div class="">{{$error}}</div>
                                 @endforeach
                             @endif
                             <div class="alert alert-succes">
-                                <div class="text-green-400 font-bold">{{session('success')}}</div>
+                                <div class="">{{session('success')}}</div>
                             </div>
                             
                         </div>
                     @else
-                    <div class="bg-purple-600 p-2 rounded-md font-semibold text-green-400 text-sm lg:text-lg w-full flex justify-center">
+                    <div class="">
                         <div>
                             <p>Aanwezig: </p>
                             @if($accomodation->presence != 0)
@@ -50,7 +50,7 @@
                             <p>Blijf je zondag avond eten: </p>
                             @endif
                         </div>
-                        <div class="ml-5">
+                        <div class="">
                             @if($accomodation->presence == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif </p>
                             @if ($accomodation->presence != 0)
                                 @if($accomodation->stay_over == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif</p>
@@ -76,12 +76,11 @@
                         
                     </div>
                     <div>
-                        <button class="mt-2 p-1 text-green-400 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-green-500 hover:font-bold hover:scale-105 transition duration-300"><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
-                        <button class="mt-2 p-1 text-green-400 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-red-500 hover:font-bold hover:scale-105 transition duration-300"><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
+                        <button class=""><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
+                        <button class=""><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
                     </div>
                   </div>
                         @endif
             </div>
-    
-    </div>
+        </div>
 </x-layout>
