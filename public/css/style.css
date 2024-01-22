@@ -89,6 +89,7 @@
 }h1{
     font-family: "BebasNeue";
     font-weight: bold;
+}
 body{
     margin: 0;
     padding: 0;
@@ -144,6 +145,8 @@ body{
 
     padding: 4px 12px;
     box-shadow: 0px 4px 9px 0px #00000066;
+
+    color: black;
 }
 
 .btn_outline:hover{
@@ -166,4 +169,14 @@ body{
 .btn_filled:hover{
     box-shadow: 0px 10px 9px 0px #00000066;
     transition: 300ms;
+}
+
+.star{
+    color: #4ADE80;
+}
+
+.input-text{
+    border-radius: 15px;
+    padding-left: 10px;
+    color: black;
 }
