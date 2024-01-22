@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* headers 1 - 3*/
 @font-face {
     font-family: 'Lobster';
     src: url('/public/fonts/Lobster-Regular.ttf') format('opentype');
@@ -12,6 +13,7 @@
     src: url('/public/fonts/BebasNeue-Regular.ttf') format('opentype');
 }
 
+/* paragraphs, h 4-5 */
 @font-face {
     font-family: 'OpenSans';
     src: url('/public/fonts/OpenSans-Regular.ttf') format('opentype');
