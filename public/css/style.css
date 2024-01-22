@@ -1,3 +1,94 @@
+/* ↓ login ↓ */
+.flex-container-login{
+    display: flex;
+    justify-content: center;
+}   
+.form-box-login{
+    background-color: #7E22CE;
+    border-radius: 15px;
+    padding: 70px;
+    color: white;
+    box-shadow: 0px 3px 5px #4ade80;
+}
+
+.input-box-login{
+    display: grid;
+    margin-top: 20px;
+}
+
+
+
+.submit-button-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+/* ↓signup↓ */
+
+.flex-container-signup{
+    display: flex;
+    justify-content: center;
+}
+
+.item-half-signup{
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.item-full-signup{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-box-signup{
+    background-color: #7E22CE;
+    padding: 40px;
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.input-box-signup{
+    display: grid;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.flex-grid-signup{
+    display: flex;
+    justify-content: space-between;    
+    flex-wrap: wrap;
+}
+
+.button-box-signup{
+    display: flex;
+    justify-content: center;
+}
+/* ↓global↓ */
+
+.button-green{
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border-color: #4ade80;
+    border-width: 2px;
+    padding: 1%;
+    color: black;
+    background-color: white;
+    
+}
+
+.button-green:hover{
+    color: white;
+    background-color: #4ade80;
+    border-color: #4ade80;
+    transition: 200ms;
+
+
+}h1{
+    font-family: "BebasNeue";
+    font-weight: bold;
 body{
     margin: 0;
     padding: 0;
@@ -25,54 +116,4 @@ body{
 .title-menu{
     font-family: "Lobster";
     font-size: 60px;
-}
-
-.row1{
-
-}
-
-.row2{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.row3{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.btn_outline{
-    background-color: #FFFFFF;
-    
-    border: 3px solid #4ADE80;
-    border-radius: 3px;
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 4px 12px;
-    box-shadow: 0px 4px 9px 0px #00000066;
-}
-
-.btn_outline:hover{
-    box-shadow: 0px 10px 9px 0px #00000066;
-    transition: 300ms;
-}
-
-.btn_filled{
-    background-color: #4ADE80;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 4px 12px;
-    box-shadow: 0px 4px 9px 0px #00000066;
-}
-
-.btn_filled:hover{
-    box-shadow: 0px 10px 9px 0px #00000066;
-    transition: 300ms;
 }
