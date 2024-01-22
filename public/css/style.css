@@ -16,12 +16,39 @@
     margin-top: 20px;
 }
 
-
-
 .submit-button-login{
     display: flex;
     justify-content: center;
     margin-top: 35px;
+}
+
+.star{
+    color: #4ADE80;
+}
+
+.input-text{
+    border-radius: 15px;
+    padding-left: 10px;
+    color: black;
+}
+
+.input-text:hover{
+    box-shadow: 2px 2px 4px black;
+    transition: 200ms;
+}
+
+.error-box{
+    border: 1px solid red;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.radio-button{
+    height: 25px;
+    width: 25x;
 }
 
 /* ↓signup↓ */
@@ -135,7 +162,6 @@ body{
 
 /* ↓ Menu ↓ */
 
-
 .menu{
     background-color: #7E22CE;
     display: flex;
@@ -147,6 +173,7 @@ body{
     color: white;
     display: flex;
     width: 80%;
+    justify-content: space-around;
 }
 
 .title-menu{
@@ -174,7 +201,7 @@ body{
     background-color: #FFFFFF;
     
     border: 3px solid #4ADE80;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 18px;
     font-weight: bold;
 
@@ -193,7 +220,7 @@ body{
     background-color: #4ADE80;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 18px;
     font-weight: bold;
 
@@ -206,31 +233,26 @@ body{
     transition: 300ms;
 }
 
-.star{
+.menu-link{
+    margin-right: 3rem;
+    font-family: "open sans";
+    font-size: 20px;
+}
+
+.text1-menu{
+    font-family: "open sans";
+    font-style: italic;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.text2-menu{
+    font-family: "open sans";
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-right: 5px;
     color: #4ADE80;
 }
 
-.input-text{
-    border-radius: 15px;
-    padding-left: 10px;
-    color: black;
-}
 
-.input-text:hover{
-    box-shadow: 2px 2px 4px black;
-    transition: 200ms;
-}
-
-.error-box{
-    border: 1px solid red;
-    border-radius: 10px;
-    justify-content: center;
-    padding: 20px;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.radio-button{
-    height: 25px;
-    width: 25x;
-}

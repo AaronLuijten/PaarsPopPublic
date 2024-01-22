@@ -7,6 +7,11 @@
     <link href="{{asset('css/app.css') }}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('graphics/Icon.png')}}" rel="icon" type="image/x-icon">
+
+    {{-- family: Lobster,Open Sans,Bebas Neue - headers 1 - 3 --}}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans&display=swap');
+    </style>
     
     <title>PaarsPop</title>
 
@@ -14,19 +19,22 @@
 <nav class="menu">
     <div class="container-menu">
         <div class="row1">
-            <div class="title-menu">PaarsPop</div>
-            @if(!Auth::check())
-            Welkom user
+            <a href="{{route('index')}}" class="title-menu">PaarsPop</a>
+            @if(Auth::check())
+                <div class="flex">
+                    <p class="text1-menu">Welkom</p>
+                    <p class="text2-menu">{{Auth::user()->first_name}}</p>
+                </div>
             @endif
         </div>
         <div class="row2">
-            <a href="{{route('index')}}">home</a>
-            <a href="{{route('index')}}">Over ons</a>
-            <a href="{{route('index')}}">Contact</a>
+            <a href="{{route('index')}}" class="menu-link">home</a>
+            <a href="{{route('index')}}" class="menu-link">Over ons</a>
+            <a href="{{route('index')}}" class="menu-link">Contact</a>
         </div>
         <div class="row3">
             <button class="btn_outline">Inloggen</button>
-            <button class="btn_filled">Registreren</button>
+            <button class="btn_filled ml-5">Registreren</button>
         </div>
     </div>
 </nav>
