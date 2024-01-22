@@ -4,11 +4,11 @@
             <form action="" method="POST" class="">
                 @csrf
                 <div class="">
-                    <b>Registreren</b>
+                    <h2>REGISTREREN</h2>
                 </div>
 
                 <div class="flex-grid-signup">
-                    <!-- First Name --> 
+                <!-- First Name -->
                     <div class="item-half-signup">
                         <div class="input-box-signup">
                             <label for="first_name" class="flex"><p class="star">*&nbsp;</p>Voornaam:</label>
@@ -22,15 +22,15 @@
                             <input type="text" name="last_name" id="last_name" value="{{old('last_name')}}" class="input-text">
                         </div>
                     </div>
-
-                     <!-- email -->
-                     <div class="item-full-signup">
+                    
+                    <!-- email -->
+                    <div class="item-full-signup">
                         <div class="input-box-signup">
                             <label for="email" class="flex"><p class="star">*&nbsp;</p>Email:</label>
                             <input type="text" name="email" id="email" value="{{old('email')}}" class="input-text">
                         </div>
-                     </div>
-                     
+                    </div>
+
                     <!-- phonenumber -->
                     <div class="item-half-signup">
                         <div class="input-box-signup">
@@ -46,7 +46,7 @@
                             <input type="date" name="date_of_birth" id="date_of_birth" value="{{old('date_of_birth')}}" class="input-text">
                         </div>
                     </div>
-                    
+
                     <!-- password  -->
                     <div class="item-half-signup">
                         <div class="input-box-signup">
@@ -67,37 +67,37 @@
                 <div class="button-box-signup">
                     <input type="submit" name="submit" value="nu registreren" class="button-green">
                 </div>
-                
-                <!-- Erorrs  -->
-                @if (!$errors->isEmpty())
-                    <div class="error-box">
-                        @error('first_name')
-                        <div class="">{{$message}}</div>
-                        @enderror
-                        @error('last_name')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('email')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('phonenumber')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('date_of_birth')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('password')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                        @error('password_confirm')
-                            <div class="">{{$message}}</div>
-                        @enderror
-                    </div>
-                @endif
-                
-                
             </form>
             
+            <div class="error-container-signup">
+                <!-- Erorrs  -->
+                @if (!$errors->isEmpty())
+                <div class="error-box">
+                    @error('first_name')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('last_name')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('email')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('phonenumber')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('date_of_birth')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('password')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                    @error('password_confirm')
+                        <div class="">{{$message}}</div>
+                    @enderror
+                </div>
+                @endif
+            </div>
+
         </div>    
     </div>
 </x-layout>
