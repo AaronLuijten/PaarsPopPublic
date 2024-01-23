@@ -30,7 +30,7 @@
         <div class="row2">
             <a href="{{route('index')}}" class="{{ Request::is('/') ? 'active' : '' }} menu-link">Home</a>
             <a href="{{route('index')}}" class="menu-link">Over ons</a>
-            <a href="{{route('index')}}" class="menu-link">Contact</a>
+            <a href="{{route('contact')}}" class="menu-link">Contact</a>
             @if (Auth::check())
             @if (Auth::user()->admin == 1)
                 <a href="{{route('adminIndex')}}" class="menu-link">Admin</a>
@@ -38,8 +38,13 @@
             @endif
         </div>
         <div class="row3">
-            <button class="btn_outline"><a href="{{route('login')}}">Inloggen</a></button>
-            <button class="btn_filled ml-5"><a href="{{route('signup')}}">Registreren</a></button>
+            @if (!Auth::check())
+                <button class="btn_outline"><a href="{{route('login')}}">Inloggen</a></button>
+                <button class="btn_filled ml-5"><a href="{{route('signup')}}">Registreren</a></button>
+            @else
+                <button class="btn_outline"><a href="{{route('logout')}}">uitloggen</a></button>
+            @endif
+            
         </div>
     </div>
 </nav>

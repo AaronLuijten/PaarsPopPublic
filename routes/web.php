@@ -72,6 +72,8 @@ Route::post('/auth/signup', [AuthController::class, 'signuppost']);
 Route::get('/auth/reset-password', [AuthController::class, 'resetPWView'])->name('resetPWView');
 Route::post('/auth/reset-password', [AuthController::class, 'sendEmail']);
 
+Route::get('/contact', [Controller::class, 'contact'])->name('contact');
+
 // Admin
 Route::middleware(['auth','admin'])->group(function ()
 {

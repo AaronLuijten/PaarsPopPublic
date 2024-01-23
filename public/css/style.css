@@ -566,3 +566,29 @@ body{
 {
     margin-top: 10px;
 }
+
+.flex-container-contact{
+    display: flex;
+    justify-content: center;
+}
+
+.box-contact{
+    background-color: #7E22CE;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    color: white;
+    box-shadow: 4px 5px 5px black;
+}
+
+.info-placeholder-contact{
+    font-weight: bold;
+    color: white;
+}
+
+.data-contact{
+    color: #4ADE80;
+    font-weight: 600;
+    margin-left: 50px;
+}
