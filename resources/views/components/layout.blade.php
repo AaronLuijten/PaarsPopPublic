@@ -33,8 +33,8 @@
             <a href="{{route('index')}}" class="menu-link">Contact</a>
         </div>
         <div class="row3">
-            <button class="btn_outline">Inloggen</button>
-            <button class="btn_filled ml-5">Registreren</button>
+            <button class="btn_outline"><a href="{{route('login')}}">Inloggen</a></button>
+            <button class="btn_filled ml-5"><a href="{{route('signup')}}">Registreren</a></button>
         </div>
     </div>
 </nav>
@@ -42,31 +42,6 @@
     <div id="bodyContainer">
         <h1>test</h1>
     </div>
-    <nav>
-        <div name="menubar" class="">
-            <ul class=''>
-                {{-- Welcome --}}
-                @if(Auth::check())
-                <li class="">Welkom&NonBreakingSpace;<div class=""><a href="{{route('profileView')}}" class="">{{Auth::user()->first_name}}</a></div></li>
-                @endif 
-                {{-- home --}}
-                <li class=""><a href="{{route('index')}}">home</a></li>
-                {{-- login / signup --}}
-                @if(!Auth::check())
-                    <li class=""><a href="{{route('login')}}">login</a></li>
-                    <li class=""><a href="{{route('signup')}}">registreren</a></li>
-                @endif
-                {{-- accomodation --}}
-                 <li class=""><a href="{{route('showacco')}}">mijn Paarspop weekend</a></li>
-                @if(Auth::check())
-                <li class=""><a href="{{route('logout')}}">log uit</a></li>
-                @endif
-                @if(Auth::check() && Auth::user()->admin==1)
-                <li class=""><a href="{{route('adminIndex')}}">Admin</a></li>
-                @endif
-             </ul>
-        </div>
-    </nav>
     <article class="">
         <div>
             {{$slot}}

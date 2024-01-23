@@ -3,38 +3,47 @@
         @php
         $accomodation = Auth::user()->accomodation  
         @endphp
-        <div class="flex justify-center">
-            <div class="bg-purple-500 flex items-center text-sm lg:text-xl flex-col mt-5 rounded-md shadow-2xl w-fit p-3">
-                <h2 class="text-green-400 font-bold mb-5">Je weekend bij Paarspop</h2>
-                <div class="flex items-start flex-col">
-                    <h2 class="text-green-400 font-bold mb-2">Gegevens:</h2>
-                    <div class="bg-purple-600 p-2 rounded-md font-semibold text-green-400 text-lg w-full mb-4">
-                        <p>Naam: {{Auth::user()->first_name}} {{Auth::user()->last_name}} </p>
-                        <p>Email: {{Auth::user()->email}}</p>
-                        <p>Telefoon nummer: {{Auth::user()->phonenumber ?? 'Geen nummer gevonden'}}</p>
+        <div class="flex-container-show">
+            <div class="data-box-show">
+                <h2>Jouw weekend bij Paarspop</h2>
+                <div class="box-info">
+                    <h3>Gegevens:</h3>
+                    <div class="name_mail_number-box">
+                        <div class="placeholder-user-info">
+                            <p>Naam: </p>
+                            <p>Email: </p>
+                            <p>Telefoon nummer: </p>
+                        </div>
+                        <div class="data-user-info">
+                            <p>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</p>
+                            <p>{{Auth::user()->email}}</p>
+                            <p>{{Auth::user()->phonenumber ?? 'Geen nummer gevonden'}}</p>
+                        </div>
                     </div>
-                    
-                    <h2 class="text-green-400 font-bold mb-2">Reservering: </h2>
-                    @if (!Auth::user()->accomodation)
-                        <div class="flex items-center flex-col text-xs lg:text-xl mt-5 w-fit p-3">
-                            <div class="text-green-400 font-bold bg-purple-700 p-2 rounded-md bg-opacity-50 flex flex-col items-center" role="alert">
-                                <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
-                                <p>We willen je vragen dat even <a href="{{route('create')}}" class="hover:underline">hier</a> te doen.</p>
+                    <div>
+                        
+                        @if (!Auth::user()->accomodation)
+                            <div class="">
+                                <div class="" role="alert">
+                                    <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
+                                    <p>We willen je vragen dat even <a href="{{route('create')}}" class="">hier</a> te doen.</p>
+                                    
+                                </div>
+                                @if($errors->any())
+                                    @foreach ($errors as $error)
+                                        <div class="">{{$error}}</div>
+                                    @endforeach
+                                @endif
+                                <div class="alert alert-succes">
+                                    <div class="succes-alert">{{session('success')}}</div>
+                                </div>
                                 
                             </div>
-                            @if($errors->any())
-                                @foreach ($errors as $error)
-                                    <div class="text-red-500">{{$error}}</div>
-                                @endforeach
-                            @endif
-                            <div class="alert alert-succes">
-                                <div class="text-green-400 font-bold">{{session('success')}}</div>
-                            </div>
-                            
                         </div>
-                    @else
-                    <div class="bg-purple-600 p-2 rounded-md font-semibold text-green-400 text-sm lg:text-lg w-full flex justify-center">
-                        <div>
+                        @else
+                    <h2>Reservering: </h2>
+                    <div class="info-data-showing">
+                        <div class="data-types-text">
                             <p>Aanwezig: </p>
                             @if($accomodation->presence != 0)
                             <p>Blijf je slapen: </p>
@@ -50,14 +59,14 @@
                             <p>Blijf je zondag avond eten: </p>
                             @endif
                         </div>
-                        <div class="ml-5">
+                        <div class="data-info-text">
                             @if($accomodation->presence == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif </p>
                             @if ($accomodation->presence != 0)
                                 @if($accomodation->stay_over == 1)<p>{{"Ja"}}@else<p>{{"Nee"}}@endif</p>
                                 @if($accomodation->stay_over == 1)
                                 <p>{{$accomodation->accomodation_type}}</p>
-                                <p>{{$accomodation->accomodation_width}}</p>
-                                <p>{{$accomodation->accomodation_length}}</p>
+                                <p>{{$accomodation->accomodation_width}}M</p>
+                                <p>{{$accomodation->accomodation_length}}M</p>
                                 @endif
                                 <p>@if ($accomodation->number_of_guests_weekend >= 1) {{"Het hele weekend"}}
                                                         @else @if($accomodation->number_of_guest_sat >= 1) {{"Alleen zaterdag"}}
@@ -75,13 +84,12 @@
                             
                         
                     </div>
-                    <div>
-                        <button class="mt-2 p-1 text-green-400 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-green-500 hover:font-bold hover:scale-105 transition duration-300"><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
-                        <button class="mt-2 p-1 text-green-400 border border-solid border-black bg-purple-600 rounded-md  hover:bg-white hover:text-red-500 hover:font-bold hover:scale-105 transition duration-300"><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
+                    <div class="mt-3">
+                        <button class="btn_filled"><a href="{{route('edit', [$accomodation->id])}}">aanpassen</a></button>
+                        <button class="btn_filled"><a href="{{route('deleteAc', [$accomodation->id])}}">verwijder reservering</a></button>
                     </div>
                   </div>
                         @endif
             </div>
-    
-    </div>
+        </div>
 </x-layout>
