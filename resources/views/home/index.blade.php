@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="heading1">PaarsPop</div>
+    <div>PaarsPop</div>
     {{-- <div class="flex flex-col items-center m-2">
         <h1 class="font-bold text-green-400 text-base lg:text-xl">Welkom op de officiële pagina voor PaarsPop24!</h1>
         <div class="bg-purple-500 rounded-md p-2 m-2 flex flex-col items-center text-green-400 font-bold">
