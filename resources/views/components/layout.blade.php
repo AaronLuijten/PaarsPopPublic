@@ -23,7 +23,7 @@
             @if(Auth::check())
                 <div class="flex">
                     <p class="text1-menu">Welkom</p>
-                    <p class="text2-menu">{{Auth::user()->first_name}}</p>
+                    <p class="text2-menu"><a href="{{route('profileView')}}">{{Auth::user()->first_name}}</a></p>
                 </div>
             @endif
         </div>

@@ -18,7 +18,7 @@
                 </div>
                  <!-- Button  -->   
                 <div class="submit-button-login">
-                    <input type="submit" name="submit" value="inloggen" class="button-green">
+                    <input type="submit" name="submit" value="inloggen" class="btn_filled">
                 </div>
                 <!-- Erorrs  -->
 

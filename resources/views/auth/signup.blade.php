@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="button-box-signup">
-                    <input type="submit" name="submit" value="nu registreren" class="button-green">
+                    <input type="submit" name="submit" value="nu registreren" class="btn_filled">
                 </div>
             </form>
             
