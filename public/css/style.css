@@ -1,5 +1,20 @@
 /* ↓global↓ */
 
+h1{
+    font-family: "Bebas Neue";
+    font-size: 60px;
+}
+
+h2{
+    font-family: "Bebas Neue";
+    font-size: 48px;
+}
+
+p{
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
 .button-green{
     font-weight: bold;
     text-transform: capitalize;
@@ -10,7 +25,6 @@
     color: black;
     background-color: white;
     box-shadow: 0px 1px 2px black;
-    
 }
 
 .button-green:hover{
@@ -23,10 +37,6 @@
 
 }
 
-h1{
-    font-family: "BebasNeue";
-    font-weight: bold;
-}
 body{
     margin: 0;
     padding: 0;
@@ -146,14 +156,61 @@ body{
 
 #bodyContainer{
     flex: 1;
+    display: flex;
+    width: 80%;
+    justify-content: start;
 }
 /* ↓ Footer ↓ */
 
 .footer{
     background-color: #7E22CE;
     color: white;
-    /* margin-top: auto; */
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.container-footer{
+    width: 80%;
+}
+
+.text-footer{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: bold;
+}
+
+.line1-footer{
     width: 100%;
+    margin-top: 1.5rem;
+    border-bottom: #FFFFFF 2px solid;
+}
+
+.line2-footer{
+    width: 2%;
+    min-height: 100%;
+    margin: 0.5rem 0rem 0rem 2rem;
+    border-left: 2px solid #FFFFFF; 
+    box-sizing: border-box; 
+}
+
+.row2-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.link_container-footer{
+    width: 50%;
+    display: grid;
+    padding: 1rem 0rem;
+}
+
+.link-footer{
+    margin-right: 8px;
+    font-weight: bold;
 }
 
 /* ↓ login ↓ */
