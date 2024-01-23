@@ -45,7 +45,7 @@
 </nav>
 <body>
     <div id="bodyContainer">
-
+        <h1>test</h1>
     </div>
     <article class="">
         <div>
@@ -76,7 +76,19 @@
     </footer>
 
     <footer class="footer">
-        test
+        <div class="container-footer">
+            <div class="row1-footer">
+                <div class="line1-footer"></div>
+            </div>
+            <div class="row2-footer">
+                <p class="text-footer">Made by</p>
+                <div class="line2-footer"></div>
+                <div class="link_container-footer">
+                    <a href="https://www.linkedin.com/in/aaron-luijten-a89012234/ " target="_blank" class="flex mb-2"><p class="link-footer">Aaron Luijten</p> <img src="{{asset('assets/images/Vector.png') }}"> </a>
+                    <a href="https://www.linkedin.com/in/martin-linders-752188234/" target="_blank" class="flex"><p class="link-footer">Martin Linders</p> <img src="{{asset('assets/images/Vector.png') }}"></a>
+                </div>
+            </div>
+        </div>
     <footer>
 </body>
 </html>
