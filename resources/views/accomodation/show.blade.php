@@ -24,7 +24,7 @@
                         @if (!Auth::user()->accomodation)
                             <div class="">
                                 <div class="" role="alert">
-                                    <h2>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h2>
+                                    <h4>Je hebt je verblijf voor dit weekend nog niet doorgegeven</h4>
                                     <p>We willen je vragen dat even <a href="{{route('create')}}" class="">hier</a> te doen.</p>
                                     
                                 </div>
