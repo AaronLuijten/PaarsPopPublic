@@ -109,4 +109,9 @@ class Controller extends BaseController
         }
         return redirect()->route('profileView')->withErrors(['msg' => 'Couldnt change password']);
     }
+
+    public function contact()
+    {
+        return view('home.contact');
+    }
 }
