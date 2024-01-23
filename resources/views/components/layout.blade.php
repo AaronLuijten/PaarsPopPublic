@@ -32,9 +32,9 @@
             <a href="{{route('index')}}" class="menu-link">Over ons</a>
             <a href="{{route('index')}}" class="menu-link">Contact</a>
             @if (Auth::check())
-            @if (Auth::user()->admin == 1)
-                <a href="{{route('adminIndex')}}" class="menu-link">Admin</a>
-            @endif
+                @if (Auth::user()->admin == 1)
+                    <a href="{{route('adminIndex')}}" class="{{ Request::is('/admin') ? 'active' : '' }} menu-link">Admin</a>
+                @endif
             @endif
         </div>
         <div class="row3">

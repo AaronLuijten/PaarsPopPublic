@@ -1,5 +1,22 @@
 <x-layout>
-    <div>PaarsPop</div>
+    <img class="homepage_img" src="{{asset('assets/images/home_img.jpg') }}">
+    <div class="container1-homepage">
+        <div class="welcome-homepage">
+            <h3>Welkom op de officiële pagina van  Paarspop!</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not </p>
+            <button class="btn_filled btn-home">Meer weten?</button>
+        </div>
+    </div>
+    <div class="container2-homepage">
+        <h1>informatie</h1>
+        <div class="row-homepage">
+            <a href="" class="container-homepage">Nieuws</a>
+            <a href="" class="container-homepage lines-homepage">Line up</a>
+            <a href="" class="container-homepage">Plattegrond</a>
+        </div>
+    </div>
+
+
     {{-- <div class="flex flex-col items-center m-2">
         <h1 class="font-bold text-green-400 text-base lg:text-xl">Welkom op de officiële pagina voor PaarsPop24!</h1>
         <div class="bg-purple-500 rounded-md p-2 m-2 flex flex-col items-center text-green-400 font-bold">

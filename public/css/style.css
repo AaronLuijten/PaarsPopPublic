@@ -10,9 +10,23 @@ h2{
     font-size: 48px;
 }
 
+h3{
+    font-family: "Bebas Neue";
+    font-size: 38px;
+    color: white;
+}
+
+h4{
+    font-family: "Open Sans";
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
 p{
     font-family: "Open Sans";
     font-size: 16px;
+    color: #FFFFFF;
 }
 
 .button-green{
@@ -160,16 +174,17 @@ body{
     flex: 1;
     width: 80%;
     margin: 0 auto;
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 /* ↓ Footer ↓ */
 
-.footer{
+.footer {
     background-color: #7E22CE;
     color: white;
 
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
     padding-bottom: 1rem;
 }
 
@@ -213,6 +228,69 @@ body{
 .link-footer{
     margin-right: 8px;
     font-weight: bold;
+}
+
+/* ↓ Home page ↓ */
+
+.homepage_img{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container1-homepage{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 160px;
+}
+
+.welcome-homepage{
+    text-align: center;
+    background-color: #7E22CE;
+    width: 45%;
+    position: absolute;
+    top: -110px;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px #4ade80;
+}
+
+.btn-home{
+    margin-top: 12px;
+    width: 11rem;
+}
+
+.row-homepage{
+    background-color: #7E22CE;
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 5px #4ade80;
+    margin-bottom: 2rem;
+}
+
+.lines-homepage{
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+}
+
+.container-homepage{
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Open Sans";
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.container-homepage:hover{
+    color: #4ADE80;
+    transition: 300ms;
 }
 
 /* ↓ login ↓ */
