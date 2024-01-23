@@ -130,7 +130,7 @@
             
         </div>    
     </div>
-
+</div>
     <script>
         function changeLabelText(radioButton) {
             var radioTent = document.getElementById('accomodation_tent');

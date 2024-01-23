@@ -1,5 +1,4 @@
 <x-layout>
-    
         @php
         $accomodation = Auth::user()->accomodation  
         @endphp
@@ -92,4 +91,5 @@
                         @endif
             </div>
         </div>
+    </div>
 </x-layout>
