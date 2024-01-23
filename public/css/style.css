@@ -380,3 +380,25 @@ body{
     color: #4ADE80;
     font-weight: 700;
 }
+
+.flex-container-news{
+    display: flex;
+    justify-content: center;
+}
+
+.box-news{
+    width: 80%;
+    background-color: gray;
+}
+
+.news-left
+{
+    background-color: brown;
+    padding: 20px;
+}
+
+.news-right
+{
+    background-color: blue;
+    padding: 20px;
+}

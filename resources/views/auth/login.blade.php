@@ -4,7 +4,7 @@
             <form action="" method="POST" class="">
                 @csrf
                 <div class="">
-                    <h2>INLOGGEN</h2>
+                    <h1>INLOGGEN</h1>
                 </div>
                 <!-- email -->
                 <div class="input-box-login">
