@@ -48,7 +48,7 @@
         <h1>test</h1>
     </div>
     <article class="">
-        <div>
+        <div class="">
             {{$slot}}
         </div>
     </article>

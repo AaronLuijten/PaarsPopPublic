@@ -9,8 +9,7 @@
                 @endphp
                 @foreach ($newsPosts as $news)
                     <div class="
-                        @php
-                             
+                        @php 
                             if($b)
                             {
                                 echo "news-left";
