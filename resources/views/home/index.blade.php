@@ -3,16 +3,16 @@
     <div class="container1-homepage">
         <div class="welcome-homepage">
             <h3>Welkom op de officiële pagina van  Paarspop!</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not </p>
-            <button class="btn_filled btn-home">Meer weten?</button>
+            <p>Op 22 en 23 juni 2024 komt het bruisende Stampersgat tot leven als het decor voor een spectaculair feest: Paarspop Festival. Dit unieke evenement wordt georganiseerd door het enthousiaste echtpaar Arjan en Ilse Luijten, ter ere van hun zilveren huwelijksjubileum op 23 januari van dit jaar. Samen vieren zij 25 jaar liefde, passie en geluk, en nodigen ze jou uit om mee te genieten van deze bijzondere gelegenheid.</p>
+            {{-- <button class="btn_filled btn-home">Meer weten?</button> --}}
         </div>
     </div>
     <div class="container2-homepage">
         <h1>informatie</h1>
         <div class="row-homepage">
-            <a href="" class="container-homepage">Nieuws</a>
-            <a href="" class="container-homepage lines-homepage">Line up</a>
-            <a href="" class="container-homepage">Plattegrond</a>
+            <a href="/news" class="container-homepage">Nieuws</a>
+            <a href="{{route('lineup')}}" class="container-homepage lines-homepage">Line up</a>
+            <a href="{{route('showMap')}}" class="container-homepage">Plattegrond</a>
         </div>
     </div>
 

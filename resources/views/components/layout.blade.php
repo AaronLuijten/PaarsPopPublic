@@ -29,7 +29,6 @@
         </div>
         <div class="row2">
             <a href="{{route('index')}}" class="{{ Request::is('/') ? 'active' : '' }} menu-link">Home</a>
-            <a href="{{route('index')}}" class="menu-link">Over ons</a>
             <a href="{{route('contact')}}" class="{{ Request::is('contact') ? 'active' : '' }} menu-link">Contact</a>
             @if (Auth::check())
                 @if (Auth::user()->admin == 1)
