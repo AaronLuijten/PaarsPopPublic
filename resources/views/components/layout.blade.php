@@ -16,48 +16,52 @@
     <title>PaarsPop</title>
 
 </head>
-<header>
-    <nav class="menu">
-        <div class="container-menu">
-            <div class="row1">
-                <a href="{{route('index')}}" class="title-menu">PaarsPop</a>
-                @if(Auth::check())
-                    <div class="flex">
-                        <p class="text1-menu">Welkom</p>
-                        <p class="text2-menu">{{Auth::user()->first_name}}</p>
-                    </div>
-                @endif
-            </div>
-            <div class="row2">
-                <a href="{{route('index')}}" class="{{ Request::is('/') ? 'active' : '' }} menu-link">home</a>
-                <a href="{{route('index')}}" class="menu-link">Over ons</a>
-                <a href="{{route('index')}}" class="menu-link">Contact</a>
-            </div>
-            <div class="row3">
-                <button class="btn_outline"><a href="{{route('login')}}">Inloggen</a></button>
-                <button class="btn_filled ml-5"><a href="{{route('signup')}}">Registreren</a></button>
-            </div>
+<nav class="menu">
+    <div class="container-menu">
+        <div class="row1">
+            <a href="{{route('index')}}" class="title-menu">PaarsPop</a>
+            @if(Auth::check())
+                <div class="flex">
+                    <p class="text1-menu">Welkom</p>
+                    <p class="text2-menu">{{Auth::user()->first_name}}</p>
+                </div>
+            @endif
         </div>
-    </nav>
-</header>
+        <div class="row2">
+            <a href="{{route('index')}}" class="{{ Request::is('/') ? 'active' : '' }} menu-link">Home</a>
+            <a href="{{route('index')}}" class="menu-link">Over ons</a>
+            <a href="{{route('index')}}" class="menu-link">Contact</a>
+            @if (Auth::check())
+            @if (Auth::user()->admin == 1)
+                <a href="{{route('adminIndex')}}" class="menu-link">Admin</a>
+            @endif
+            @endif
+        </div>
+        <div class="row3">
+            <button class="btn_outline"><a href="{{route('login')}}">Inloggen</a></button>
+            <button class="btn_filled ml-5"><a href="{{route('signup')}}">Registreren</a></button>
+        </div>
+    </div>
+</nav>
 <body class="mainBody">
     <div id="bodyContainer">
         {{$slot}}
     </div>
-</body>
-<footer class="footer">
-    <div class="container-footer">
-        <div class="row1-footer">
-            <div class="line1-footer"></div>
-        </div>
-        <div class="row2-footer">
-            <p class="text-footer">Made by</p>
-            <div class="line2-footer"></div>
-            <div class="link_container-footer">
-                <a href="https://www.linkedin.com/in/aaron-luijten-a89012234/ " target="_blank" class="flex mb-2"><p class="link-footer">Aaron Luijten</p> <img src="{{asset('assets/images/Vector.png') }}"> </a>
-                <a href="https://www.linkedin.com/in/martin-linders-752188234/" target="_blank" class="flex"><p class="link-footer">Martin Linders</p> <img src="{{asset('assets/images/Vector.png') }}"></a>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row1-footer">
+                <div class="line1-footer"></div>
+            </div>
+            <div class="row2-footer">
+                <p class="text-footer">Made by</p>
+                <div class="line2-footer"></div>
+                <div class="link_container-footer">
+                    <a href="https://www.linkedin.com/in/aaron-luijten-a89012234/ " target="_blank" class="flex mb-2"><p class="link-footer">Aaron Luijten</p> <img src="{{asset('assets/images/Vector.png') }}"> </a>
+                    <a href="https://www.linkedin.com/in/martin-linders-752188234/" target="_blank" class="flex"><p class="link-footer">Martin Linders</p> <img src="{{asset('assets/images/Vector.png') }}"></a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    <footer>
+</body>
 </html>
