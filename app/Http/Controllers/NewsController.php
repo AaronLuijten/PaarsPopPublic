@@ -63,6 +63,7 @@ class NewsController extends Controller
             'uploadDate' => ['date', 'required'],
             'attachment' => ['image']
         ]);
+
         if(isset($data['attachment']))
         {
             $image = $data['attachment'];

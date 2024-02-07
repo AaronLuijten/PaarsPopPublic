@@ -602,6 +602,10 @@ body{
     font-size: larger;
 }
 
+.news-content{
+    white-space: pre-line;
+}
+
 
 /* ↓ profile ↓ */
 

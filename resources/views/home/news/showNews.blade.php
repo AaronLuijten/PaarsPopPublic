@@ -6,7 +6,7 @@
                 @if ($news->attachment)
                     <img src="{{asset($news->attachment->filepath . $news->attachment->filename)}}" alt="" class="news-picture">
                 @endif
-                <p class="">{{$news->content}}</p>
+                <p class="news-content">{{$news->content}}</p>
             </div>
             <button class="btn_filled"><a href="{{url()->previous()}}">Terug</a></button>
         </div>
