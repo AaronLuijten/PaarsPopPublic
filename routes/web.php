@@ -74,6 +74,15 @@ Route::post('/auth/reset-password', [AuthController::class, 'sendEmail']);
 
 Route::get('/contact', [Controller::class, 'contact'])->name('contact');
 
+
+
+// home-news
+Route::prefix('/news')->group(function ()
+{
+    Route::get('/', [NewsController::class, 'showCard'])->name('showCard');
+    Route::get('/{news}', [NewsController::class, 'showArticle'])->name('showArticle');
+});
+
 // Admin
 Route::middleware(['auth','admin'])->group(function ()
 {
@@ -106,18 +115,10 @@ Route::middleware(['auth','admin'])->group(function ()
         });
 
     });
-
-    // Should be moved to the right prefix / location when app launches.
-    // ------------------------------------------------------------------------------------
+    //Move out of prefix when it may be seen publicly
+    // line-up
     Route::get('/lineup',[Controller::class, 'lineup'])->name('lineup');
 
-    // home-news
-    Route::prefix('/news')->group(function ()
-    {
-        Route::get('/', [NewsController::class, 'showCard'])->name('showCard');
-        Route::get('/{news}', [NewsController::class, 'showArticle'])->name('showArticle');
-    });
-    // ------------------------------------------------------------------------------------
 });
 
 
