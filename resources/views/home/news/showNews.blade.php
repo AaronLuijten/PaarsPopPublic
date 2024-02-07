@@ -4,7 +4,7 @@
             <h2 class="">{{$news->Title}}</h2>
             <div class="box-news-grid">
                 @if ($news->attachment)
-                    <img src="{{asset('/app/public/' + $news->attachment->filepath . $news->attachment->filename)}}" alt="" class="news-picture">
+                    <img src="{{asset($news->attachment->filepath . $news->attachment->filename)}}" alt="" class="news-picture">
                 @endif
                 <p class="">{{$news->content}}</p>
             </div>
