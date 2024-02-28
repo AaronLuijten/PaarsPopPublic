@@ -648,7 +648,15 @@ body{
 
 
 /* ↓ profile ↓ */
-
+@media only screen and (max-width: 600px) {
+    .box-buttons-profile
+    {
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 10px;
+    }
+}
 .flex-container-profile{
     display: flex;
     justify-content: center;
