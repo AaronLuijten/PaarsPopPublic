@@ -392,6 +392,7 @@ body{
     display: flex;
     justify-content: center;
 }   
+
 .form-box-login{
     background-color: #7E22CE;
     border-radius: 15px;
@@ -399,6 +400,18 @@ body{
     color: white;
     box-shadow: 0px 3px 5px #4ade80;
     width:30%;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-box-login{
+        background-color: #7E22CE;
+        border-radius: 15px;
+        padding: 40px;
+        color: white;
+        box-shadow: 0px 3px 5px #4ade80;
+        width:80%;
+    }
+
 }
 
 .input-box-login{
@@ -473,6 +486,33 @@ body{
     font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+    .flex-grid-signup{
+        display: flex;
+        justify-content: space-between;    
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .form-box-signup{
+        background-color: #7E22CE;
+        padding: 40px;
+        color: white;
+        border-radius: 15px;
+        width: 80%;
+        box-shadow: 0px 3px 5px #4ade80;
+    }
+
+    .item-half-signup{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .item-full-signup{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+  }
 .flex-grid-signup{
     display: flex;
     justify-content: space-between;    
@@ -548,6 +588,40 @@ body{
 
 }
 
+@media only screen and (max-width: 600px) {
+    .data-box-show{
+        background-color: #7E22CE;
+        border-radius: 15px;
+        color: white;
+        padding: 20px;
+        width: fit-content;
+        justify-content: center;
+        flex-direction: column;
+        width: 110%;
+    
+    }
+
+    .data-box-show h3
+    {
+        font-size: 200%;
+    }
+
+    .name_mail_number-box{
+        background-color: #9740e3;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px black;
+        display: flex;
+        justify-content: space-around;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: 5px;
+    }
+
+}
+
+
+
 .name_mail_number-box{
     background-color: #9740e3;
     padding: 10px;
@@ -559,6 +633,7 @@ body{
     padding-left: 40px;
     margin: 5px;
 }
+
 
 .data-types-text{
     color: white;
@@ -663,7 +738,6 @@ body{
 
 
 /* ↓ news individual article ↓ */
-
 .box-news-full{
     width: 80%;
     background-color: #7E22CE;
@@ -672,6 +746,7 @@ body{
     color: white;
     box-shadow: 3px 5px 7px black;
 }
+
 .box-news-full img{
     width: 700px;
     height: 400px;
@@ -694,10 +769,40 @@ body{
 .news-content{
     white-space: pre-line;
 }
+@media only screen and (max-width: 600px) {
+    .box-news-full{
+        width: 100%;
+        background-color :#7E22CE;
+        border-radius: 15px;
+        padding: 20px;
+        color: white;
+        box-shadow: 3px 5px 7px black;
+    }
 
+    .box-news-full img{
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 4px 5px 10px black;
+        margin: 5px;
+    }
+    .box-news-grid
+{
+    display: grid;
+}
+}
 
 /* ↓ profile ↓ */
-
+@media only screen and (max-width: 600px) {
+    .box-buttons-profile
+    {
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 10px;
+    }
+}
 .flex-container-profile{
     display: flex;
     justify-content: center;

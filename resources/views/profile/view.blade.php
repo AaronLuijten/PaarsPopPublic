@@ -24,20 +24,22 @@
                 </div>
             </div>
         </div>
-        <div class="box-buttons-profile">
-            <button class="btn_filled"><a class="" href="{{route('showacco')}}">mijn Paarspop weekend</a></button>
-            <button class="btn_filled"><a href="{{route('changePassword')}}">Wachtwoord aanppassen</a></button>
-            <button class="btn_filled"><a href="{{route('editView')}}">gegevens aanpassen</a></button>
-            <button class="btn_filled"><a href="{{route('deleteProfile')}}">verwijderen</a></button>
-            @if (Session::has('success'))
-            <div class="alert alert-succes">
-                <div class="">{{session('success')}}</div>
+        <div class="container-buttons">
+            <div class="box-buttons-profile">
+                <button class="btn_filled" style="margin-top:4%;"><a class="" href="{{route('showacco')}}">mijn Paarspop weekend</a></button>
+                <button class="btn_filled" style="margin-top:4%;"><a href="{{route('changePassword')}}">Wachtwoord aanppassen</a></button>
+                <button class="btn_filled" style="margin-top:4%;"><a href="{{route('editView')}}">gegevens aanpassen</a></button>
+                <button class="btn_filled" style="margin-top:4%;"><a href="{{route('deleteProfile')}}">verwijderen</a></button>
+                @if (Session::has('success'))
+                <div class="alert alert-succes">
+                    <div class="">{{session('success')}}</div>
+                </div>
+                    
+                @endif
+                @foreach ($errors->all() as $error)
+                    <div class="">{{$error}}</div>
+                @endforeach
             </div>
-                
-            @endif
-            @foreach ($errors->all() as $error)
-                <div class="">{{$error}}</div>
-            @endforeach
         </div>
                     
     </div>
