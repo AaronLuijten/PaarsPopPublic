@@ -434,7 +434,7 @@ body{
 .form-box-login{
     background-color: #7E22CE;
     border-radius: 15px;
-    padding: 40px;
+    padding: 3%;
     color: white;
     box-shadow: 0px 3px 5px #4ade80;
     width:30%;
@@ -781,7 +781,7 @@ body{
 .box-news-article{
     background-color: #7E22CE;
     border-radius: 15px;
-    padding: 20px;
+    padding: 5%;
     color: white;
     max-width: 50em;
     margin-top: 40px;
