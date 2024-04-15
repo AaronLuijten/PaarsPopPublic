@@ -12,7 +12,7 @@
         <div class="row-homepage">
             <a href="/news" class="container-homepage">Nieuws</a>
             <a href="{{-- {{route('lineup')}} --}}" class="container-homepage lines-homepage"><div class="box-lineup"><div>Line up</div><p>(nog niet beschikbaar)</p></div></a>
-            <a href="{{route('showMap')}}" class="container-homepage">Plattegrond</a>
+            <a href="{{route('showMap')}}" class="container-homepage">Parkeren en plattegrond</a>
         </div>
     </div>
 

@@ -54,8 +54,46 @@ p{
 body{
     margin: 0;
     padding: 0;
+    font-size: 1.0em;
 }
 
+@media only screen and (min-width: 0) and (max-width: 600px) {
+    /* ↓ Menu mobile ↓ */
+    body{
+        margin: 0;
+        padding: 0;
+        font-size: 0.85em; 
+    }
+
+    h1{
+        font-family: "Bebas Neue";
+        font-size: 50px;
+    }
+    
+    h2{
+        font-family: "Bebas Neue";
+        font-size: 36px;
+    }
+    
+    h3{
+        font-family: "Bebas Neue";
+        font-size: 28px;
+        color: white;
+    }
+    
+    h4{
+        font-family: "Open Sans";
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    p{
+        font-family: "Open Sans";
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+}
 .container-body{
     width: 80%;
 }
@@ -473,7 +511,7 @@ body{
 
 .form-box-signup{
     background-color: #7E22CE;
-    padding: 40px;
+    padding: 3%;
     color: white;
     border-radius: 15px;
     width: 50%;
@@ -496,7 +534,7 @@ body{
 
     .form-box-signup{
         background-color: #7E22CE;
-        padding: 40px;
+        padding: 3%;
         color: white;
         border-radius: 15px;
         width: 80%;
@@ -679,7 +717,7 @@ body{
 
 .data-user-info{
     font-weight: 600;
-    color: #4ADE80;
+    color: #4ADE80; 
 }
 
 .succes-alert{
@@ -711,6 +749,28 @@ body{
     width: 100%;
     display: flex;
     justify-content: end;
+}
+
+@media only screen and (min-width: 0) and (max-width: 600px) {
+    .news-left
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        word-wrap: break-word;
+    }
+
+    .news-right
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        word-wrap: break-word;
+    }
+
+    .word-wrap{
+        word-break: normal;
+    }
 }
 
 .flex-container-news-article{

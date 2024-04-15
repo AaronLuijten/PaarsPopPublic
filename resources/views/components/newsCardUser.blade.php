@@ -3,7 +3,7 @@
 <article >
     <div class="box-news-article">
     <header class="">
-        <h2>{{$news->Title}}</h2>
+        <h3 class="word-wrap">{{$news->Title}}</h3>
         <div class="flex">
             <p class="date-news">Datum:&nbsp; <p class="date-news-data">{{$news->uploadDate}}</p></p>
         </div>
