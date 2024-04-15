@@ -933,3 +933,24 @@ body{
     font-weight: 600;
     margin-left: 50px;
 }
+
+/* Informatie en plattegrond */
+.flex-information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
+}
+
+.flex-parking{
+}
+.parking-text p{
+    color: black;
+    font-weight: 600;
+    max-width: 80%;
+}
+
+.flex-map img{
+    /* max-width: ; */
+}
