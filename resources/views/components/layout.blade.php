@@ -11,6 +11,7 @@
     {{-- family: Lobster,Open Sans,Bebas Neue - headers 1 - 3 --}}
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
     </style>
     
     <title>PaarsPop</title>

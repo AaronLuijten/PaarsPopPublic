@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccomodationController;
+use App\Http\Controllers\Line_upController;
 use App\Http\Controllers\NewsController;
 use App\Http\Middleware\IsAdmin;
 
@@ -59,6 +60,10 @@ Route::middleware(['auth', 'web'])->group(function ()
 // home
 Route::get('/',[Controller::class, 'index'])->name('index');
 Route::get('/plattegrond', [Controller::class, 'map'])->name('showMap');
+
+// line-up
+// Route::get('/lineup',[Controller::class, 'lineup'])->name('lineup');
+Route::resource('line_up', Line_upController::class);
 
 // login
 Route::get('/auth/login', [AuthController::class, 'login'])->name('login');
@@ -115,9 +120,6 @@ Route::middleware(['auth','admin'])->group(function ()
         });
 
     });
-    //Move out of prefix when it may be seen publicly
-    // line-up
-    Route::get('/lineup',[Controller::class, 'lineup'])->name('lineup');
 
 });
 
