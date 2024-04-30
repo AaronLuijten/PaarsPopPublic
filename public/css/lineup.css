@@ -15,6 +15,7 @@
     width: 100%;
     object-fit: cover;
     height: 100%;
+    border-radius: 4px;
 }
 
 .content_lineup{
@@ -55,4 +56,11 @@
     opacity: 1;
     position: unset;
     transition: ease-in-out 700ms;
+}
+
+@media only screen and (max-width: 600px) {
+    .container_lineup{
+        grid-template-columns: unset;
+        margin-bottom: 70%;
+    }
 }
