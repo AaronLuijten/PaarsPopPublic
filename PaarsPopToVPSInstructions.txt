@@ -1,22 +1,22 @@
 cd to laravel app
 cd var/www/PaarsPop
 
-git pull origin main
+sudo git pull origin main
 
-php artisan cache:clear
-php artisan config:cache
-php artisan route:cache
+sudo php artisan cache:clear
+sudo php artisan config:cache
+sudo php artisan route:cache
 
 cd public
 
-rm storage
+sudo rm storage
 
 cd ../
 
-php artisane storage:link
+sudo php artisan storage:link
 
-chmod -R 755 storage bootstrap/cache
-chmod -R 775 storage
-chown -R www-data:www-data storage
+sudo chmod -R 755 storage bootstrap/cache
+sudo chmod -R 775 storage
+sudo chown -R www-data:www-data storage
 
 sudo service apache2 restart

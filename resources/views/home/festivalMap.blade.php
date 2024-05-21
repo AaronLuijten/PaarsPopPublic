@@ -17,13 +17,16 @@
                 </p>
             </div>
         </div>
-        <h2>Festival locatie</h2>
-        <iframe class="maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.6955232860154!2d4.443119069696915!3d51.614571098239885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c43def250b9f59%3A0x1e5fb644d99e8420!2sBrugstraat%206%2C%204754%20AA%20Stampersgat!5e1!3m2!1snl!2snl!4v1716309237193!5m2!1snl!2snl"
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <div>
+        <div class="map-location">
+            <h2>Festival locatie</h2>
+            <iframe class="maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.6955232860154!2d4.443119069696915!3d51.614571098239885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c43def250b9f59%3A0x1e5fb644d99e8420!2sBrugstraat%206%2C%204754%20AA%20Stampersgat!5e1!3m2!1snl!2snl!4v1716309237193!5m2!1snl!2snl"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+        <div class="map-location">
             <h2>Parkeer locaties</h2>
             <ul>
                 <li>Weike van Bus : <a href="https://maps.app.goo.gl/VFjmqEcHZQ2NLZiM9" target="_blank" class="maps-link">51°36'49.7"N 4°26'37.7"E</a></li>
@@ -31,6 +34,12 @@
                 <li>Havenstraat bij Dorpshuis: <a href="https://maps.app.goo.gl/w1nEB83CrN99JQGn6" target="_blank" class="maps-link">51°36'49.1"N 4°26'45.1"E</a></li>
                 <li>Parkeerplaats voetbal en tennis: <a href="https://maps.app.goo.gl/ryZnGE6CpyUJsccF9" target="_blank" class="maps-link">51°36'51.4"N 4°26'03.8"E</a></li>
             </ul>
+        </div>
+        <div class="map-location">
+            <h2>Festival plattegrond</h2>
+            <img src="{{asset('assets/images/festival terrein achter.PNG')}}" alt="Festival terrein achter" class="map-top">
+            <br>
+            <img src="{{asset('assets/images/festival terrein voor.PNG')}}" alt="Festival terrein avoor" class="map-top">
         </div>
     </div>
     

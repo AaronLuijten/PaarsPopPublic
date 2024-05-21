@@ -961,15 +961,22 @@ body{
 }
 
 .maps-iframe{
-    width: 600px;
-    height: 450px; 
+    width: 50%; 
+    height: 450px;
     border: 0;
 }
 
+.map-top{
+    width: 70%;
+}
+
+.map-location{
+    margin-top: 10%;
+}
 
 @media only screen and (min-width: 0) and (max-width: 600px){
     .maps-iframe{
-        width: 300px;
+        width: 80%;
         height: 225px; 
         border: 0;
     }
