@@ -185,7 +185,7 @@ class NewsController extends Controller
 
         $today = Carbon::now()->format('Y-m-d');
 
-        $news = News::whereDate('uploadDate', '<=', $today)->orderBy('uploadDate', 'desc')->get();
+        $news = News::whereDate('uploadDate', '<=', $today)->orderBy('uploadDate', 'desc')->orderBy('id', 'desc')->get();
         
         return view('home.news.show',
         ['newsPosts' => $news]);
