@@ -14,7 +14,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $newsPosts = News::Simplepaginate(6)->sortByDesc('uploadDate');
+        $newsPosts = News::all()->sortByDesc('uploadDate')->sortByDesc('id');
         return view('admin.news.show',
         ['newsPosts' => $newsPosts]);
     }
@@ -71,7 +71,7 @@ class NewsController extends Controller
 
             $imageNewFileName = date("Ymd Hisms"). "-" . Auth::user()->id. ".". $image->extension();
 
-            Storage::disk('public')->put($imageNewFileName, $image->get());
+            $image->storeAs('public', $imageNewFileName);
 
             $data['user_id'] = Auth::user()->id;
 

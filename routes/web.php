@@ -63,7 +63,7 @@ Route::get('/plattegrond', [Controller::class, 'map'])->name('showMap');
 
 // line-up
 // Route::get('/lineup',[Controller::class, 'lineup'])->name('lineup');
-Route::resource('line_up', Line_upController::class);
+Route::resource('line-up', Line_upController::class);
 
 // login
 Route::get('/auth/login', [AuthController::class, 'login'])->name('login');
