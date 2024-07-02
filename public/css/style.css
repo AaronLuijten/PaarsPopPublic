@@ -954,3 +954,31 @@ body{
 .flex-map img{
     /* max-width: ; */
 }
+
+.maps-link{
+    text-decoration: underline blue;
+
+}
+
+.maps-iframe{
+    width: 50%; 
+    height: 450px;
+    border: 0;
+}
+
+.map-top{
+    width: 70%;
+}
+
+.map-location{
+    margin-top: 10%;
+}
+
+@media only screen and (min-width: 0) and (max-width: 600px){
+    .maps-iframe{
+        width: 80%;
+        height: 225px; 
+        border: 0;
+    }
+
+}
