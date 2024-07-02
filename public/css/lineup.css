@@ -58,6 +58,38 @@
     transition: ease-in-out 700ms;
 }
 
+
+/* ↓ create ↓ */
+.container_create{
+    display: flex;
+    justify-content: center;
+}
+
+.create{
+    display: grid;
+    width: 50%;
+    background-color: #7E22CE;
+    padding: 3%;
+}
+
+.row1{
+    display: flex;
+}
+
+.row2{
+    display: grid;
+}
+
+#artist_name{
+    border: black 2px solid;
+}
+
+#artist_desc{
+    width: 35%;
+    height: 7rem;
+    border: black 2px solid;
+}
+
 @media only screen and (max-width: 600px) {
     .container_lineup{
         grid-template-columns: unset;

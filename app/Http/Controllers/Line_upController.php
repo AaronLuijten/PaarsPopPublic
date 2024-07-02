@@ -14,4 +14,9 @@ class Line_upController extends Controller
 
         return view('line_up.index', compact('lineup'));
     }
+
+    public function create()
+    {
+        return view('line_up.create');
+    }
 }
